@@ -13,11 +13,15 @@ class BriefingRequest extends FormRequest
 
     public function rules(): array
     {
+        // Reject CR / LF / tab — header-injection guard while on the EOL
+        // Laravel 10 branch (CVE-2026-48019, patched only in Laravel 12.61+).
+        $noCrlf = 'not_regex:/[\r\n\t]/';
+
         return [
-            'name'            => ['required', 'string', 'max:120'],
-            'role'            => ['nullable', 'string', 'max:120'],
-            'org'             => ['required', 'string', 'max:160'],
-            'email'           => ['required', 'email:rfc', 'max:190'],
+            'name'            => ['required', 'string', 'max:120', $noCrlf],
+            'role'            => ['nullable', 'string', 'max:120', $noCrlf],
+            'org'             => ['required', 'string', 'max:160', $noCrlf],
+            'email'           => ['required', 'string', 'email:strict', 'max:190', $noCrlf],
             'interest'        => ['nullable', 'string', 'max:4000'],
             'company_website' => ['nullable', 'prohibited'],
         ];

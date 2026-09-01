@@ -13,10 +13,15 @@ class ContactRequest extends FormRequest
 
     public function rules(): array
     {
+        // `no_crlf` rejects carriage-return / line-feed / tab — a manual guard
+        // against header injection while this project sits on the EOL Laravel 10
+        // branch (see CVE-2026-48019, fixed only in Laravel 12.61+).
+        $noCrlf = 'not_regex:/[\r\n\t]/';
+
         return [
-            'name'                => ['required', 'string', 'max:120'],
-            'org'                 => ['nullable', 'string', 'max:160'],
-            'email'               => ['required', 'email:rfc', 'max:190'],
+            'name'                => ['required', 'string', 'max:120', $noCrlf],
+            'org'                 => ['nullable', 'string', 'max:160', $noCrlf],
+            'email'               => ['required', 'string', 'email:strict', 'max:190', $noCrlf],
             'message'             => ['required', 'string', 'max:4000'],
             // Honeypot — must stay empty.
             'company_website'     => ['nullable', 'prohibited'],
