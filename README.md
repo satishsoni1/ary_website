@@ -41,6 +41,30 @@ Then open http://127.0.0.1:8000.
 | `public/js/site.js` | Original interactions + `v5` accessible mobile nav & scrolled-header |
 | `public/assets/` | Images / favicons |
 
+## Security posture (read this)
+
+This project is pinned to **PHP 8.1 → Laravel 10**, which reached end-of-life in
+Feb 2025. Three advisories now affect the whole Laravel 10 line with **no fix on
+that branch** (all resolved only in Laravel 12.61+):
+
+* `CVE-2026-48019` / `GHSA-5vg9-5847-vvmq` — CRLF injection in the default `email`
+  validation rule *(high)*
+* `GHSA-crmm-hgp2-wgrp` — temporary signed-URL path confusion *(medium)*
+* `GHSA-5vg9-5847-vvmq` (PKSA duplicate) — CRLF in email rule *(high)*
+
+Because we deliberately stay on this stack, `composer.json` sets
+`config.audit.block-insecure = false` and lists these IDs under
+`config.audit.ignore` so the host's Composer will install. Compensating controls
+applied in app code:
+
+* `ContactRequest` / `BriefingRequest` use `email:strict` (no RFC warnings) and a
+  `not_regex:/[\r\n\t]/` guard on every free-text field that could reach a mail
+  header — this neutralises the CRLF-injection vector directly.
+* No SMTP backend is wired up, so no user input reaches a mail transport yet.
+
+**Recommended:** move the host to PHP 8.2+/8.3 and upgrade to Laravel 12 when you
+can — then remove the `audit` block from `composer.json`.
+
 ## Forms
 
 The contact and briefing forms POST to Laravel, are validated server-side, keep a
