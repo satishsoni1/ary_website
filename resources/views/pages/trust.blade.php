@@ -13,7 +13,14 @@
  <div class="ln">16:05:02&nbsp;&nbsp;APPROVE&nbsp;&nbsp;officer signature · dispatched</div>
  <div class="ln">——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EGRESS&nbsp;&nbsp;&nbsp;<span class="g">0 events</span></div></div><div class="statrow"><div class="stat rv"><div class="v" data-to="0">0</div><div class="k">External egress in default config</div></div><div class="stat rv"><div class="v" data-to="0">0</div><div class="k">Records training outside models</div></div><div class="stat rv"><div class="v" data-to="100">0<small>%</small></div><div class="k">Answers traceable end-to-end</div></div><div class="stat rv"><div class="v" data-to="1">0</div><div class="k">Boundary that matters: yours</div></div></div></div></section>
 
-<section><div class="wrap"><div class="notice rv">Certifications on our roadmap: ISO 27001 and SOC 2. Shown here once earned — not before.</div></div></section>
+<section id="certification"><div class="wrap"><div class="sh rv"><span class="ey">Certification</span><h2>ISO/IEC 27001:2022 certified.</h2></div><div class="cert rv">
+<a class="cert-doc" href="/assets/iso-27001-certificate.pdf" target="_blank" rel="noopener"><img src="/assets/iso-27001-certificate.jpg" alt="ISO 27001:2022 certificate issued to Aryvon Intelligence Private Limited by ICS International Certification" loading="lazy" width="745" height="1053"/></a>
+<div class="cert-body"><p class="lead">Our Information Security Management System is independently certified to ISO/IEC 27001:2022.</p>
+<dl class="cert-meta"><div><dt>Registration No.</dt><dd>ICS/2026/ISMS-058</dd></div><div><dt>Certification body</dt><dd>ICS International Certification (IAF / NAF accredited)</dd></div><div><dt>Valid</dt><dd>5 Sep 2026 – 4 Sep 2029</dd></div><div><dt>Surveillance audits</dt><dd>Sep 2027 · Sep 2028</dd></div></dl>
+<p class="cert-scope"><b>Scope:</b> Design, development, implementation and support of software products and platforms, including artificial intelligence, machine learning, data processing and document management solutions, and provision of related technology services to clients across sectors.</p>
+<div class="ctarow" style="justify-content:flex-start"><a class="btn navy" href="/assets/iso-27001-certificate.pdf" target="_blank" rel="noopener">View certificate (PDF)</a><a class="btn ghost" href="https://www.icsic.in" target="_blank" rel="noopener">Verify at icsic.in</a></div>
+<div class="notice" style="margin-top:22px">Next on our roadmap: SOC 2. Shown here once earned — not before.</div>
+</div></div></div></section>
 
 <section class="band-tint" id="disclosure"><div class="wrap"><div class="sh rv"><span class="ey">Responsible Disclosure</span><h2>Found something? Tell us safely.</h2></div><div class="prose rv"><p>Email <a href="mailto:{{ config('site.email') }}">{{ config('site.email') }}</a> with the subject "Security disclosure", including steps to reproduce. Do not access or exfiltrate data that is not yours, and allow a reasonable remediation window. We acknowledge promptly and credit researchers who wish to be named once a fix ships.</p></div></div></section>
 

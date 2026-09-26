@@ -28,7 +28,7 @@ class PageController extends Controller
         'trust' => [
             'pages.trust',
             'Trust',
-            'Security, sovereignty, AI governance, reliability, and responsible disclosure — one page.',
+            'ISO/IEC 27001:2022 certified. Security, sovereignty, AI governance, reliability, and responsible disclosure — one page.',
         ],
         'founders' => [
             'pages.founders',

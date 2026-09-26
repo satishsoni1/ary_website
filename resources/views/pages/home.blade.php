@@ -6,6 +6,7 @@
 <h1>Institutional intelligence that <span class="g">never leaves your control.</span></h1>
 <p class="lead" style="margin-top:18px">One workspace for every department, workflow and role — with Ved producing the orders, charters and replies your work runs on. Grounded in your records. Cited to the page. Inside your perimeter.</p>
 <div class="cta"><a class="btn gold" href="{{ route('contact') }}#brief">Request a Briefing</a><a class="btn ghost" href="#configuration">How It's Configured</a></div>
+<a class="isobadge" href="{{ route('trust') }}#certification"><span class="isoseal">ISO</span><span><b>ISO/IEC 27001:2022 certified</b><small>Information Security Management System · ICS/2026/ISMS-058</small></span></a>
 <div class="ws rv" id="ws">
 <div class="ws-bar"><div class="ws-logo"><span class="stroke"></span> VedVault</div>
 <div class="ws-org">Govt. deployment · fictitious data</div><div class="ws-sp"></div>
@@ -66,6 +67,13 @@
 </div></div>
 </div></section>
 
+<section class="isostrip"><div class="wrap"><div class="isorow rv">
+<a class="isothumb" href="/assets/iso-27001-certificate.pdf" target="_blank" rel="noopener"><img src="/assets/iso-27001-certificate.jpg" alt="ISO 27001:2022 certificate — Aryvon Intelligence" loading="lazy" width="745" height="1053"/></a>
+<div><span class="ey">Certified</span><h2 style="margin-top:10px">ISO/IEC 27001:2022 — independently audited.</h2><p class="lead" style="margin-top:12px">Our information security management system is certified by ICS International Certification (IAF-accredited) across the design, development and support of our AI, data-processing and document-management platforms.</p>
+<div class="isofacts"><span>Reg. No. <b>ICS/2026/ISMS-058</b></span><span>Valid <b>Sep 2026 – Sep 2029</b></span></div></div>
+<div class="isocta"><a class="btn navy" href="{{ route('trust') }}#certification">See certification</a><a class="btn ghost" href="/assets/iso-27001-certificate.pdf" target="_blank" rel="noopener">View PDF</a></div>
+</div></div></section>
+
 <section><div class="wrap" style="text-align:center">
 <div class="sh rv"><span class="ey">The People</span><h2>Built by three directors who've shipped before.</h2></div>
 <div class="peoplerow rv">
@@ -82,7 +90,7 @@
 <details class="faqd" open><summary>Is this just a chatbot over our documents?</summary><p>No. VedVault models your organisation — departments, workflows, roles, permissions — and Ved works inside that structure, producing the documents your work runs on.</p></details>
 <details class="faqd"><summary>Where does it run, and who sees our data?</summary><p>Inside your environment — on-premise, sovereign cloud, or air-gapped. Zero egress by default, and your records never train external models.</p></details>
 <details class="faqd"><summary>How is access controlled?</summary><p>Role-scoped, record-level entitlements — and Ved inherits exactly the same boundary as the signed-in user.</p></details>
-<details class="faqd"><summary>Are you certified, and do you have customers yet?</summary><p>We're early-stage: ISO 27001 and SOC 2 are on the roadmap, and our first institutions are onboarding as design partners. We show verified proof, not borrowed logos.</p></details>
+<details class="faqd"><summary>Are you certified, and do you have customers yet?</summary><p>We're ISO/IEC 27001:2022 certified (ICS/2026/ISMS-058 — see our Trust page); SOC 2 is on the roadmap, and our first institutions are onboarding as design partners. We show verified proof, not borrowed logos.</p></details>
 </div></div></section>
 
 @include('partials.cta')
